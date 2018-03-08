@@ -16,21 +16,27 @@ public class ExtraLab2 {
         }
         printIntArray_2Dim(arr); //print array
 
-//        //....> FINDING THE GREATEST ROW WITH 1s <....//
-//        int max_sumrow=0;
-//        int atrow=0;
-//        for( int i=0; i<arr.length; i++ ){ 
-//            if( sumRow(i,arr)>max_sumrow ){
-//                max_sumrow = sumRow(i,arr); 
-//                atrow = i;
-//            }
-//        }
-//        System.out.println("The row with the most 1s is: " + atrow + " which sum is " + max_sumrow);
-//        
-        //....> FINDING THE GREATEST COLUMN WITH 1s <....//
-        int max_sumcolumn=0;
-        int column=0,   row=0,  atcolum=0;
+        //....> FINDING THE GREATEST ROW WITH 1s <....//
+        int max_sumrow=0;
+        int at_row=0;
+        for( int i=0; i<arr.length; i++ ){ 
+            if( sumRow(i,arr)>max_sumrow ){
+                max_sumrow = sumRow(i,arr); 
+                at_row = i;
+            }
+        }
+        System.out.println("The row with the most 1s is: " + at_row );
         
+        //....> FINDING THE GREATEST COLUMN WITH 1s <....//
+        int max_sum_columns=0;
+        int at_column=0;
+        for( int column=0; column<arr[0].length; column++ ){ 
+            if( sumColumn(column, arr) > max_sum_columns ){
+                max_sum_columns = sumColumn(column, arr);
+                at_column = column;
+            }
+        }
+        System.out.println("The column with the most 1s is " + at_column );
         
         
         
